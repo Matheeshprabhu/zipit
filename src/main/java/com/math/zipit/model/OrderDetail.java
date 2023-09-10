@@ -1,9 +1,11 @@
 package com.math.zipit.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Getter
+@Entity
 public class OrderDetail {
 
     @Id
