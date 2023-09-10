@@ -1,17 +1,17 @@
 package com.math.zipit.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
+import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.sql.Timestamp;
 
 @Getter
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     private String userName;
     private String email;

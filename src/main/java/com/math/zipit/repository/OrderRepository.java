@@ -1,4 +1,4 @@
-package com.math.zipit.repositories;
+package com.math.zipit.repository;
 
 import com.math.zipit.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;

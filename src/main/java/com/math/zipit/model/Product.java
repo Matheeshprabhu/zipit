@@ -1,8 +1,6 @@
 package com.math.zipit.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
+import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.sql.Timestamp;
@@ -12,6 +10,7 @@ import java.sql.Timestamp;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
     private String productName;
     private String description;

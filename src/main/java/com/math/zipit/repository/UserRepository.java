@@ -1,4 +1,4 @@
-package com.math.zipit.repositories;
+package com.math.zipit.repository;
 
 import com.math.zipit.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
