@@ -4,6 +4,9 @@ import com.math.zipit.model.User;
 import com.math.zipit.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -20,7 +23,14 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User getUser(Long userId) {
-        return userRepository.getReferenceById(userId);
+        if (userRepository.findById(userId).isPresent())
+            return userRepository.findById(userId).get();
+        return null;
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
 }
